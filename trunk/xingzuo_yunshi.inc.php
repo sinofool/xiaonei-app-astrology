@@ -41,7 +41,7 @@ if($opt=="friend"){
 	$ownerAstName = astName($ownerBirth);
 	$ownerAstId = astId($ownerBirth);
 	
-	echo "You are :", $ownerAstName, "<br/>";
+	echo "你是", $ownerAstName, "<br/>";
 	for($pos=1;$pos<count($infos);++$pos){
 		$posName=$infos[$pos]["name"];
 		$posBirth=$infos[$pos]["birthday"];
@@ -49,9 +49,9 @@ if($opt=="friend"){
 		$posAstName = astName($posBirth);
 		$posAstId = astId($posBirth);
 		if($posAstId=="")continue;
-		echo $posName," is :", $posAstName, "<br/>";
+		echo $posName,"是", $posAstName, "<br/>";
 		if($ownerSex==$posSex){
-			echo "Gender the same<br/><br/>";
+			echo "目前只能测异性^_^<br/><br/>";
 			continue;
 		}
 		$maleAstName = $ownerSex=="1" ? $ownerAstName : $posAstName;
@@ -59,12 +59,16 @@ if($opt=="friend"){
 		$femaleAstName = $ownerSex=="0" ? $ownerAstName : $posAstName;
 		$femaleAstId =  $ownerSex=="0" ? $ownerAstId : $posAstId;
 
+		if($maleAstName=="" || $maleAstId=="" || $femaleAstName=="" || $femaleAstId==""){
+			echo "<br/>没有填写生日<br/>";
+		}else{
 		$conn = mysql_connect("localhost", "root", "");
 		mysql_select_db("astrology", $conn);
 		mysql_query("SET NAMES utf8");
 		$res = mysql_query("SELECT ".$maleAstId." FROM xingzuo WHERE owner='".$femaleAstName."'", $conn);
 		while($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 			echo str_replace("\n","<br/>",$row[$maleAstId]), "<br/><br/>";
+		}
 		}
 	}
 }

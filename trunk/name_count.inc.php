@@ -1,7 +1,5 @@
 
-<p class="large-font">
-<b>姓名笔画</b>
-</p>
+<h2 style="font-size:15px; font-weight:bold; color:#fff;">姓名笔画</h2>
 <?php
 require_once("name_count.func.inc.php");
 if($opt=="friend"){
