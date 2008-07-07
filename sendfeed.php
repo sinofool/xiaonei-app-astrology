@@ -28,10 +28,11 @@ if($type=="name"){
 	$title_data="{}";
 	$body_data="{\"uid1\":\"".$infos[0]["uid"]."\",\"uid2\":\"".$infos[1]["uid"]."\",\"cont\":\"".$result."\",\"feedid\":\"".$feedid."\"}";
 	$resource_id=$ownerId;
-	echo $body_data;
+	//echo $body_data;
 	$ret = $client->feed_publishTemplatizedAction($template_id, $title_data, $body_data, $resource_id);
-	if($ret==1){
-		echo "发送成功<br/>";
-	}
+	//echo $ret;
+	//if($ret==1){
+	//}
 }
 ?>
+<img src="http://images.sinofool.net/xnapp-astrology/img/done.jpg" />

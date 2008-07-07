@@ -26,13 +26,14 @@ if($type=="name"){
 		$title_data="{}";
 		$body_data="{\"uid1\":\"".$uid1."\",\"uid2\":\"".$uid2."\",\"cont\":\"".$cont."\",\"feedid\":\"".$feedId."\"}";
 		$resource_id=$feedid;
-		echo $body_data;
+		//echo $body_data;
 		$ret = $client->feed_publishTemplatizedAction($template_id, $title_data, $body_data, $resource_id);
-		if($ret==1){
-			echo "发送成功<br/>";
-		}
+		//if($ret==1){
+		//	echo "发送成功<br/>";
+		//}
 	}
 	mysql_close($conn);
 
 }
 ?>
+<img src="http://images.sinofool.net/xnapp-astrology/img/done.jpg" />
