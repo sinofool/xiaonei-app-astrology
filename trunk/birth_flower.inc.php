@@ -19,13 +19,6 @@ for($pos=0;$pos<count($infos);++$pos){
 	mysql_free_result($res);
 }
 mysql_close($conn);
+
+$client->profile_setXNML($ownerId, $result_flower . "<br/>" . $result_word . "<br/>" . $result_comment ,"http://apps.xiaonei.com/astrology/");
 ?>
-	<div class="header clearfix" style="padding:0 50px;">
-		<div class="ava float-left">
-		</div>
-		<div class="text-info" style="margin-left:120px;">
-			<p class="bold large-font margin-bottom-5"><?php echo($result_flower)?></p>
-			<p><?php echo($result_word)?></p>
-			<p><?php echo($result_comment)?></p>
-		</div>
-	</div>

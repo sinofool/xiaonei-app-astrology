@@ -14,7 +14,7 @@ if($opt=="friend"){
 ?>
 <p class="large-font">
 &nbsp;&nbsp;<?php echo $posName?>(<?php echo $posLevel?>)和你(<?php echo $ownerLevel?>)的关系是：<?php echo calcName($ownerName, $posName)?>
-&nbsp;&nbsp;<a href="sendfeed.php?type=name&o=<?php echo $ownerUid?>&f=<?php echo $posUid?>" target="_blank">发送新鲜事</a>
+&nbsp;&nbsp;<a href="sendfeed.php?type=name&o=<?php echo $ownerUid?>&f=<?php echo $posUid?>" target="_blank"><img src="http://images.sinofool.net/xnapp-astrology/img/feed.gif"/></a>
 </p>
 <?php
 	}
@@ -31,7 +31,7 @@ if($opt=="friend"){
 ?>
 <p class="large-font">
 &nbsp;&nbsp;<?php echo $posName?>(<?php echo $posLevel?>)和<?php echo $tagName?>(<?php echo $tagLevel?>)的关系是：<?php echo calcName($posName, $tagName)?>
-&nbsp;&nbsp;<a href="sendfeed.php?type=name&o=<?php echo $posUid?>&f=<?php echo $tagUid?>" target="_blank">发送新鲜事</a>
+&nbsp;&nbsp;<a href="sendfeed.php?type=name&o=<?php echo $posUid?>&f=<?php echo $tagUid?>" target="_blank"><img src="http://images.sinofool.net/xnapp-astrology/img/feed.gif"/></a>
 </p>
 <?php
 		}

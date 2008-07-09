@@ -137,6 +137,12 @@ class XiaoNeiRestClient{
 		$p["uids"]=$uids;
 		return $this->call_method("xiaonei.requests.sendRequest", $p);
 	}
+	function profile_setXNML($uid,$profile, $profileAction){
+		$p["profile"]=$profile;
+		$p["profile_action"]=$profileAction;
+		$p["uid"]=$uid;
+		return $this->call_method("xiaonei.profile.setXNML", $p);
+	}
 
 	function call_method($method, $params) {
 		$xml = $this->post_request($method, $params);

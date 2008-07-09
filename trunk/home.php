@@ -10,7 +10,7 @@ function arrayToStr($array){
 	};
 	return $result;
 }
-$client = new XiaoNeiRestClient($_REQUEST["xn_sig_api_key"],"9c3b7045303f4c32865c6df3e88f6e56");
+$client = new XiaoNeiRestClient($_REQUEST["xn_sig_api_key"],"");
 $client->session_key = $_REQUEST["xn_sig_session_key"];
 $ownerId = $client->user_getLoggedInUser(); 
 $ids=$_REQUEST["ids"];
