@@ -1,5 +1,5 @@
 
-		<div style="background:#ffd5ff;color:#fff;margin:-15px ">
+			<div style="background:#ffd5ff;color:#fff;">
 			
 			<div style="height:167px; background:#ffd5ff url(http://images.sinofool.net/xnapp-astrology/img/bg_title.jpg) center no-repeat; ">
 			</div>
@@ -11,6 +11,8 @@
 					<div style="margin-left:10px;">
 						<p>在下面选择若干好友，点击 “比较我和好友” 或者 “比较好友和好友”</p>
 						<p>测试的结果，可以选择发送新鲜事。</p>
+						<p>&nbsp;</p>
+						<p>还有更多功能即将开放：星座花语，属相速配等等。</p>
 					</div>		
 				</div>
 			</div>

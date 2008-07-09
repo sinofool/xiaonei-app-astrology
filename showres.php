@@ -4,6 +4,7 @@
 					<h1 style="font-size:16px; font-weight:bold; margin-bottom:10px;">测试结果</h1>
 					<div style="margin-left:10px;">
 <?php
+include "birth_flower.inc.php";
 switch($opt) {
 	case "cross":
 		include "name_count.inc.php";
